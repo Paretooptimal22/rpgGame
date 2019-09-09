@@ -1,7 +1,8 @@
 // hp, ap, cp
-let hp = 100
-let ap = ``
-let cp = ``
+let playerHealth = 100
+let cpuHealth = 100
+let attack = ``
+let counter = ``
 
 // render fighters
 const renderFighters = () => {
