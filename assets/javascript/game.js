@@ -29,6 +29,13 @@ document.getElementById(`hp2`).textContent = `HP: ` + fighter2.hp
 document.getElementById(`hp3`).textContent = `HP: ` + fighter3.hp
 document.getElementById(`hp4`).textContent = `HP: ` + fighter4.hp
 
+// select player event
+document.addEventListener(`click`, event => {
+  if (event.target.className === `fighter`) {
+
+  }
+})
+
 
 
 // render fighters
