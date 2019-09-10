@@ -24,12 +24,15 @@ let fighter1 = {
     cp: 20
   }
 
-
+document.getElementById(`hp1`).textContent = `HP: ` + fighter1.hp
+document.getElementById(`hp2`).textContent = `HP: ` + fighter2.hp
+document.getElementById(`hp3`).textContent = `HP: ` + fighter3.hp
+document.getElementById(`hp4`).textContent = `HP: ` + fighter4.hp
 
 
 // render fighters
 // const renderFighters = () => {
-//   
+  
 //   document.getElementById(`fighters`).innerHTML = ``
 //   for (let i = 0; i < 4; i++) {
 //     let fighterElem = document.createElement(`div`)
@@ -44,13 +47,13 @@ let fighter1 = {
 //     `
 //     document.getElementById(`fighters`).append(fighterElem)
 //     document.getElementById(`name1`).textContent = fighter1.name
-    // document.getElementById(`name2`).textContent = fighter2.name
-    // document.getElementById(`name3`).textContent = fighter3.name
-    // document.getElementById(`name4`).textContent = fighter4.name
+//     document.getElementById(`name2`).textContent = fighter2.name
+//     document.getElementById(`name3`).textContent = fighter3.name
+//     document.getElementById(`name4`).textContent = fighter4.name
     
-  }
+//   }
 
-}
+// }
 // renderFighters()
 
 
