@@ -30,6 +30,7 @@ document.getElementById(`hp3`).textContent = `HP: ` + fighter3.hp
 document.getElementById(`hp4`).textContent = `HP: ` + fighter4.hp
 
 
+
 // render fighters
 // const renderFighters = () => {
   
