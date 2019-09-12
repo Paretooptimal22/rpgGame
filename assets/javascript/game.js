@@ -135,7 +135,7 @@ document.addEventListener(`click`, event => {
 
 
 let attackBtn = document.createElement(`a`)
-attackBtn.className = `waves-effect waves-light btn`
+attackBtn.className = `waves-effect waves-light btn red darken-4`
 attackBtn.innerHTML = `
 ATTACK!
 `
