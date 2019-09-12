@@ -32,6 +32,30 @@ document.getElementById(`hp4`).innerHTML = `HP: ` + fighter4.hp
 // select player event
 document.addEventListener(`click`, event => {
   // fighters
+  let fighter1 = {
+    name: `Cloud`,
+    hp: 175,
+    ap: 5,
+    cp: 10
+  }
+  let fighter2 = {
+    name: `Aeris`,
+    hp: 200,
+    ap: 4,
+    cp: 5
+  }
+  let fighter3 = {
+    name: `Sephiroth`,
+    hp: 185,
+    ap: 6,
+    cp: 30
+  }
+  let fighter4 = {
+    name: `Lightning`,
+    hp: 155,
+    ap: 7,
+    cp: 20
+  }
   // Cloud's element
   let cloudElem = document.createElement(`div`)
   cloudElem.className = `col s6`
@@ -42,7 +66,7 @@ document.addEventListener(`click`, event => {
       <span class="card-title" id="name1">Cloud</span>
     </div>
     <div class="card-content">
-      <p id="hp1"></p>
+      <p id="hp1">HP: ${fighter1.hp}</p>
     </div>
   </div>
   `
@@ -56,7 +80,7 @@ document.addEventListener(`click`, event => {
       <span class="card-title" id="name2">Aeris</span>
     </div>
     <div class="card-content">
-      <p id="hp2"></p>
+      <p id="hp2">HP: ${fighter2.hp}</p>
     </div>
   </div>
   `
@@ -70,7 +94,7 @@ document.addEventListener(`click`, event => {
       <span class="card-title" id="name3">Sephiroth</span>
     </div>
     <div class="card-content">
-      <p id="hp3"></p>
+      <p id="hp3">HP: ${fighter3.hp}</p>
     </div>
   </div>
   `
@@ -84,7 +108,7 @@ document.addEventListener(`click`, event => {
       <span class="card-title" id="name4">Lightning</span>
     </div>
     <div class="card-content">
-      <p id="hp4"></p>
+      <p id="hp4">HP: ${fighter4.hp}</p>
     </div>
   </div>
   `
