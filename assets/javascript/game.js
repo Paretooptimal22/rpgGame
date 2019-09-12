@@ -96,15 +96,15 @@ document.addEventListener(`click`, event => {
     document.getElementById(`select`).innerHTML = `Select Your Opponent!`
   } else if (event.target.id === 'aeris') {
     document.getElementById(`arena`).append(aerisElem)
-    document.getElementById(`p1`).innerHTML = ``
+    document.getElementById(`p2`).innerHTML = ``
     document.getElementById(`select`).innerHTML = `Select Your Opponent!`
   } else if (event.target.id === 'sephiroth') {
     document.getElementById(`arena`).append(sephElem)
-    document.getElementById(`p1`).innerHTML = ``
+    document.getElementById(`p3`).innerHTML = ``
     document.getElementById(`select`).innerHTML = `Select Your Opponent!`
   } else if (event.target.id === 'lightning') {
     document.getElementById(`arena`).append(lightElem)
-    document.getElementById(`p1`).innerHTML = ``
+    document.getElementById(`p4`).innerHTML = ``
     document.getElementById(`select`).innerHTML = `Select Your Opponent!`
   } 
 })
