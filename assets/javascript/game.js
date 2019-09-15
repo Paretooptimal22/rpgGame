@@ -62,7 +62,7 @@ let playerSelect = () => {
       }
       // Cloud's element
       let cloudElem = document.createElement(`div`)
-      cloudElem.className = `col s6`
+      // cloudElem.className = `col s3`
       cloudElem.innerHTML = `
       <div class="card" id="cloud">
         <div class="card-image">
@@ -76,7 +76,7 @@ let playerSelect = () => {
       `
       // Aeris's element
       let aerisElem = document.createElement(`div`)
-      aerisElem.className = `col s6`
+      // aerisElem.className = `col s3`
       aerisElem.innerHTML = `
       <div class="card" id="aeris">
         <div class="card-image">
@@ -90,7 +90,7 @@ let playerSelect = () => {
       `
       // Sephiroth's element
       let sephElem = document.createElement(`div`)
-      sephElem.className = `col s6`
+      // sephElem.className = `col s3`
       sephElem.innerHTML = `
       <div class="card" id="sephiroth">
         <div class="card-image">
@@ -104,7 +104,7 @@ let playerSelect = () => {
       `
       // Lightning's element
       let lightElem = document.createElement(`div`)
-      lightElem.className = `col s6`
+      // lightElem.className = `col s3`
       lightElem.innerHTML = `
       <div class="card" id="lightning">
         <div class="card-image">
@@ -118,20 +118,38 @@ let playerSelect = () => {
       `
 
       // click event to move fighters to battle arena
-      if (event.target.id === `cloud`) {
-        document.getElementById(`arena`).append(cloudElem)
+      // move character to player side
+      if (event.target.id === `cloud` && clickCount < 2) {
+        document.getElementById(`player`).append(cloudElem)
         document.getElementById(`p1`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
-      } else if (event.target.id === 'aeris') {
-        document.getElementById(`arena`).append(aerisElem)
+      } else if (event.target.id === `aeris` && clickCount < 2) {
+        document.getElementById(`player`).append(aerisElem)
         document.getElementById(`p2`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
-      } else if (event.target.id === 'sephiroth') {
-        document.getElementById(`arena`).append(sephElem)
+      } else if (event.target.id === `sephiroth` && clickCount < 2) {
+        document.getElementById(`player`).append(sephElem)
         document.getElementById(`p3`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
-      } else if (event.target.id === 'lightning') {
-        document.getElementById(`arena`).append(lightElem)
+      } else if (event.target.id === `lightning` && clickCount < 2) {
+        document.getElementById(`player`).append(lightElem)
+        document.getElementById(`p4`).innerHTML = ``
+        document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+      //move character to opponent side 
+      } else if (event.target.id === `cloud` && clickCount > 1){
+        document.getElementById(`opponent`).append(cloudElem)
+        document.getElementById(`p1`).innerHTML = ``
+        document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+      } else if (event.target.id === `aeris` && clickCount > 1) {
+        document.getElementById(`opponent`).append(aerisElem)
+        document.getElementById(`p2`).innerHTML = ``
+        document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+      } else if (event.target.id === `sephiroth` && clickCount > 1) {
+        document.getElementById(`opponent`).append(sephElem)
+        document.getElementById(`p3`).innerHTML = ``
+        document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+      } else if (event.target.id === `lightning` && clickCount > 1) {
+        document.getElementById(`opponent`).append(lightElem)
         document.getElementById(`p4`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
       }
@@ -139,20 +157,18 @@ let playerSelect = () => {
   })}
 playerSelect()
 
-
-
-
-
+// render attack button
 let attackBtn = document.createElement(`a`)
 attackBtn.id = `attackBtn`
 attackBtn.className = `waves-effect waves-light btn red darken-4`
-attackBtn.innerHTML = `
-ATTACK!
-`
+attackBtn.innerHTML = `ATTACK!`
 document.getElementById(`attack`).append(attackBtn)
 
+// click button to attack
 const fightMode = () => {
-  document.getElementById(`attackBtn`).addEventListener(`click`, )
+  document.getElementById(`attackBtn`).addEventListener(`click`, event => {
+
+  })
 }
 
 
