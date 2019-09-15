@@ -123,35 +123,43 @@ let playerSelect = () => {
         document.getElementById(`player`).append(cloudElem)
         document.getElementById(`p1`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+        document.getElementById(`playerHeader`).innerHTML = `Your Player`
       } else if (event.target.id === `aeris` && clickCount < 2) {
         document.getElementById(`player`).append(aerisElem)
         document.getElementById(`p2`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+        document.getElementById(`playerHeader`).innerHTML = `Your Player`
       } else if (event.target.id === `sephiroth` && clickCount < 2) {
         document.getElementById(`player`).append(sephElem)
         document.getElementById(`p3`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+        document.getElementById(`playerHeader`).innerHTML = `Your Player`
       } else if (event.target.id === `lightning` && clickCount < 2) {
         document.getElementById(`player`).append(lightElem)
         document.getElementById(`p4`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+        document.getElementById(`playerHeader`).innerHTML = `Your Player`
       //move character to opponent side 
       } else if (event.target.id === `cloud` && clickCount > 1){
         document.getElementById(`opponent`).append(cloudElem)
         document.getElementById(`p1`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+        document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
       } else if (event.target.id === `aeris` && clickCount > 1) {
         document.getElementById(`opponent`).append(aerisElem)
         document.getElementById(`p2`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+        document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
       } else if (event.target.id === `sephiroth` && clickCount > 1) {
         document.getElementById(`opponent`).append(sephElem)
         document.getElementById(`p3`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+        document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
       } else if (event.target.id === `lightning` && clickCount > 1) {
         document.getElementById(`opponent`).append(lightElem)
         document.getElementById(`p4`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
+        document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
       }
     }
   })}
