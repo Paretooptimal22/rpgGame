@@ -69,9 +69,6 @@ let playerSelect = () => {
           <img class="fighter" src="./assets/images/fighter1.jpg">
           <span class="card-title" id="name1">Cloud</span>
         </div>
-        <div class="card-content">
-          <p id="hp1">HP: ${fighter1.hp}</p>
-        </div>
       </div>
       `
       // Aeris's element
@@ -82,9 +79,6 @@ let playerSelect = () => {
         <div class="card-image">
           <img class="fighter" src="./assets/images/fighter2.jpg">
           <span class="card-title" id="name2">Aeris</span>
-        </div>
-        <div class="card-content">
-          <p id="hp2">HP: ${fighter2.hp}</p>
         </div>
       </div>
       `
@@ -97,9 +91,6 @@ let playerSelect = () => {
           <img class="fighter" src="./assets/images/fighter3.jpg">
           <span class="card-title" id="name3">Sephiroth</span>
         </div>
-        <div class="card-content">
-          <p id="hp3">HP: ${fighter3.hp}</p>
-        </div>
       </div>
       `
       // Lightning's element
@@ -111,9 +102,6 @@ let playerSelect = () => {
           <img class="fighter" src="./assets/images/fighter4.jpg">
           <span class="card-title" id="name4">Lightning</span>
         </div>
-        <div class="card-content">
-          <p id="hp4">HP: ${fighter4.hp}</p>
-        </div>
       </div>
       `
 
@@ -124,42 +112,50 @@ let playerSelect = () => {
         document.getElementById(`p1`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
+        document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter1.hp}`
       } else if (event.target.id === `aeris` && clickCount < 2) {
         document.getElementById(`player`).append(aerisElem)
         document.getElementById(`p2`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
+        document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter2.hp}`
       } else if (event.target.id === `sephiroth` && clickCount < 2) {
         document.getElementById(`player`).append(sephElem)
         document.getElementById(`p3`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
+        document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter3.hp}`
       } else if (event.target.id === `lightning` && clickCount < 2) {
         document.getElementById(`player`).append(lightElem)
         document.getElementById(`p4`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
+        document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter4.hp}`
       //move character to opponent side 
       } else if (event.target.id === `cloud` && clickCount > 1){
         document.getElementById(`opponent`).append(cloudElem)
         document.getElementById(`p1`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
+        document.getElementById(`oppInfo`).innerHTML = `Opponent HP: ${fighter1.hp}`
       } else if (event.target.id === `aeris` && clickCount > 1) {
         document.getElementById(`opponent`).append(aerisElem)
         document.getElementById(`p2`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
+        document.getElementById(`oppInfo`).innerHTML = `Opponent HP: ${fighter2.hp}`
       } else if (event.target.id === `sephiroth` && clickCount > 1) {
         document.getElementById(`opponent`).append(sephElem)
         document.getElementById(`p3`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
+        document.getElementById(`oppInfo`).innerHTML = `Opponent HP: ${fighter3.hp}`
       } else if (event.target.id === `lightning` && clickCount > 1) {
         document.getElementById(`opponent`).append(lightElem)
         document.getElementById(`p4`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
+        document.getElementById(`oppInfo`).innerHTML = `Opponent HP: ${fighter4.hp}`
       }
     }
   })}
@@ -175,7 +171,7 @@ document.getElementById(`attack`).append(attackBtn)
 // click button to attack
 const fightMode = () => {
   document.getElementById(`attackBtn`).addEventListener(`click`, event => {
-
+    
   })
 }
 
