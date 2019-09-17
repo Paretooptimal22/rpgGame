@@ -107,50 +107,50 @@ let playerSelect = () => {
 
       // click event to move fighters to battle arena
       // move character to player side
-      if (event.target.id === `cloud` && clickCount < 2) {
+      if (event.target.id === `cloudBtn` && clickCount < 2) {
         document.getElementById(`player`).append(cloudElem)
         document.getElementById(`p1`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter1.hp}`
-      } else if (event.target.id === `aeris` && clickCount < 2) {
+      } else if (event.target.id === `aerisBtn` && clickCount < 2) {
         document.getElementById(`player`).append(aerisElem)
         document.getElementById(`p2`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter2.hp}`
-      } else if (event.target.id === `sephiroth` && clickCount < 2) {
+      } else if (event.target.id === `sephBtn` && clickCount < 2) {
         document.getElementById(`player`).append(sephElem)
         document.getElementById(`p3`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter3.hp}`
-      } else if (event.target.id === `lightning` && clickCount < 2) {
+      } else if (event.target.id === `lightBtn` && clickCount < 2) {
         document.getElementById(`player`).append(lightElem)
         document.getElementById(`p4`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter4.hp}`
       //move character to opponent side 
-      } else if (event.target.id === `cloud` && clickCount > 1){
+      } else if (event.target.id === `cloudBtn` && clickCount > 1){
         document.getElementById(`opponent`).append(cloudElem)
         document.getElementById(`p1`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
         document.getElementById(`oppInfo`).innerHTML = `Opponent HP: ${fighter1.hp}`
-      } else if (event.target.id === `aeris` && clickCount > 1) {
+      } else if (event.target.id === `aerisBtn` && clickCount > 1) {
         document.getElementById(`opponent`).append(aerisElem)
         document.getElementById(`p2`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
         document.getElementById(`oppInfo`).innerHTML = `Opponent HP: ${fighter2.hp}`
-      } else if (event.target.id === `sephiroth` && clickCount > 1) {
+      } else if (event.target.id === `sephBtn` && clickCount > 1) {
         document.getElementById(`opponent`).append(sephElem)
         document.getElementById(`p3`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`oppHeader`).innerHTML = `Your Opponent`
         document.getElementById(`oppInfo`).innerHTML = `Opponent HP: ${fighter3.hp}`
-      } else if (event.target.id === `lightning` && clickCount > 1) {
+      } else if (event.target.id === `lightBtn` && clickCount > 1) {
         document.getElementById(`opponent`).append(lightElem)
         document.getElementById(`p4`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
@@ -164,7 +164,7 @@ playerSelect()
 // render attack button
 let attackBtn = document.createElement(`a`)
 attackBtn.id = `attackBtn`
-attackBtn.className = `waves-effect waves-light btn red darken-4`
+attackBtn.className = `waves-effect waves-light btn red darken-4 center`
 attackBtn.innerHTML = `ATTACK!`
 document.getElementById(`attack`).append(attackBtn)
 
