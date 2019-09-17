@@ -192,6 +192,10 @@ playerSelect()
 const attackOpp = () => {
   if (event.target.id === `cloudAttackBtn`) {
       let ap = fighter1.ap
+      document.getElementById(`cloudAttackBtn`).addEventListener(`click`, event => {
+        ap = ap + ap
+        
+      })
       
       
     }
