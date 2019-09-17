@@ -15,13 +15,13 @@ let fighter3 = {
   name: `Sephiroth`,
   hp: 185,
   ap: 6,
-  cp: 30
+  cp: 20
 }
 let fighter4 = {
   name: `Lightning`,
-  hp: 155,
+  hp: 165,
   ap: 7,
-  cp: 20
+  cp: 15
 }
 
 document.getElementById(`hp1`).innerHTML = `HP: ` + fighter1.hp
@@ -52,13 +52,13 @@ let playerSelect = () => {
         name: `Sephiroth`,
         hp: 185,
         ap: 6,
-        cp: 30
+        cp: 20
       }
       let fighter4 = {
         name: `Lightning`,
-        hp: 155,
+        hp: 165,
         ap: 7,
-        cp: 20
+        cp: 15
       }
       // Cloud's element
       let cloudElem = document.createElement(`div`)
@@ -104,11 +104,29 @@ let playerSelect = () => {
         </div>
       </div>
       `
-      // attackBtn
-      let attackBtn = document.createElement(`a`)
-      attackBtn.id = `attackBtn`
-      attackBtn.className = `waves-effect waves-light btn red darken-4`
-      attackBtn.innerHTML = `ATTACK!`
+      // Cloud's Attack Button
+      let cloudAttackBtn = document.createElement(`a`)
+      cloudAttackBtn.id = `cloudAttack`
+      cloudAttackBtn.className = `waves-effect waves-light btn red darken-4`
+      cloudAttackBtn.innerHTML = `ATTACK!`
+
+      // Aeris' Attack Button
+      let aerisAttackBtn = document.createElement(`a`)
+      aerisAttackBtn.id = `aerisAttack`
+      aerisAttackBtn.className = `waves-effect waves-light btn red darken-4`
+      aerisAttackBtn.innerHTML = `ATTACK!`
+
+      // Sephiroth's Attack Button
+      let sephAttackBtn = document.createElement(`a`)
+      sephAttackBtn.id = `sephAttack`
+      sephAttackBtn.className = `waves-effect waves-light btn red darken-4`
+      sephAttackBtn.innerHTML = `ATTACK!`
+
+      // Lightning's Attack Button
+      let lightAttackBtn = document.createElement(`a`)
+      lightAttackBtn.id = `lightAttack`
+      lightAttackBtn.className = `waves-effect waves-light btn red darken-4`
+      lightAttackBtn.innerHTML = `ATTACK!`
 
       // click event to move fighters to battle arena
       // move character to player side
@@ -118,28 +136,28 @@ let playerSelect = () => {
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter1.hp}`
-        document.getElementById(`attack`).append(attackBtn)
+        document.getElementById(`attack`).append(cloudAttackBtn)
       } else if (event.target.id === `aerisBtn` && clickCount < 2) {
         document.getElementById(`player`).append(aerisElem)
         document.getElementById(`p2`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter2.hp}`
-        document.getElementById(`attack`).append(attackBtn)
+        document.getElementById(`attack`).append(aerisAttackBtn)
       } else if (event.target.id === `sephBtn` && clickCount < 2) {
         document.getElementById(`player`).append(sephElem)
         document.getElementById(`p3`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter3.hp}`
-        document.getElementById(`attack`).append(attackBtn)
+        document.getElementById(`attack`).append(sephAttackBtn)
       } else if (event.target.id === `lightBtn` && clickCount < 2) {
         document.getElementById(`player`).append(lightElem)
         document.getElementById(`p4`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter4.hp}`
-        document.getElementById(`attack`).append(attackBtn)
+        document.getElementById(`attack`).append(lightAttackBtn)
       //move character to opponent side 
       } else if (event.target.id === `cloudBtn` && clickCount > 1){
         document.getElementById(`opponent`).append(cloudElem)
