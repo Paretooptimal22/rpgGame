@@ -189,11 +189,14 @@ let playerSelect = () => {
 playerSelect()
 
 // click button to attack
-const fightMode = () => {
-  document.getElementById(`attackBtn`).addEventListener(`click`, event => {
+const attackOpp = () => {
+  if (event.target.id === `cloudAttackBtn`) {
+      let ap = fighter1.ap
+      
+      
+    }
+  }
 
-  })
-}
 
 
 
