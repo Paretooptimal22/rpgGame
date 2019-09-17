@@ -104,6 +104,11 @@ let playerSelect = () => {
         </div>
       </div>
       `
+      // attackBtn
+      let attackBtn = document.createElement(`a`)
+      attackBtn.id = `attackBtn`
+      attackBtn.className = `waves-effect waves-light btn red darken-4`
+      attackBtn.innerHTML = `ATTACK!`
 
       // click event to move fighters to battle arena
       // move character to player side
@@ -113,24 +118,28 @@ let playerSelect = () => {
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter1.hp}`
+        document.getElementById(`attack`).append(attackBtn)
       } else if (event.target.id === `aerisBtn` && clickCount < 2) {
         document.getElementById(`player`).append(aerisElem)
         document.getElementById(`p2`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter2.hp}`
+        document.getElementById(`attack`).append(attackBtn)
       } else if (event.target.id === `sephBtn` && clickCount < 2) {
         document.getElementById(`player`).append(sephElem)
         document.getElementById(`p3`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter3.hp}`
+        document.getElementById(`attack`).append(attackBtn)
       } else if (event.target.id === `lightBtn` && clickCount < 2) {
         document.getElementById(`player`).append(lightElem)
         document.getElementById(`p4`).innerHTML = ``
         document.getElementById(`select`).innerHTML = `Select Your Opponent!`
         document.getElementById(`playerHeader`).innerHTML = `Your Player`
         document.getElementById(`playerInfo`).innerHTML = `Your HP: ${fighter4.hp}`
+        document.getElementById(`attack`).append(attackBtn)
       //move character to opponent side 
       } else if (event.target.id === `cloudBtn` && clickCount > 1){
         document.getElementById(`opponent`).append(cloudElem)
@@ -161,19 +170,13 @@ let playerSelect = () => {
   })}
 playerSelect()
 
-// render attack button
-let attackBtn = document.createElement(`a`)
-attackBtn.id = `attackBtn`
-attackBtn.className = `waves-effect waves-light btn red darken-4 center`
-attackBtn.innerHTML = `ATTACK!`
-document.getElementById(`attack`).append(attackBtn)
-
 // click button to attack
 const fightMode = () => {
   document.getElementById(`attackBtn`).addEventListener(`click`, event => {
-    
+
   })
 }
+
 
 
 
